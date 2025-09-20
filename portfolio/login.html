@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Secure Login & Registration</title>
+  <link rel="stylesheet" href="style.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container" id="container">
+    <!-- Login Form -->
+    <div class="form-container login-container">
+      <h2>Welcome Back</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="loginUsername" placeholder="Username or Email" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="loginPassword" placeholder="Password" required>
+        </div>
+        <div class="error" id="loginError">Invalid username or password</div>
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <div class="separator">or continue with</div>
+      <div class="social-login">
+        <div class="social-btn facebook"><i class="fab fa-facebook-f"></i></div>
+        <div class="social-btn google"><i class="fab fa-google"></i></div>
+        <div class="social-btn twitter"><i class="fab fa-twitter"></i></div>
+      </div>
+      <div class="switch-form">
+        Don’t have an account? <a id="showRegister">Register Now</a>
+      </div>
+    </div>
+
+    <!-- Register Form -->
+    <div class="form-container register-container">
+      <h2>Create Account</h2>
+      <form id="registerForm">
+        <div class="form-group">
+          <i class="fas fa-user"></i>
+          <input type="text" id="registerName" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-envelope"></i>
+          <input type="email" id="registerEmail" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="registerPassword" placeholder="Password" required>
+        </div>
+        <div class="form-group">
+          <i class="fas fa-lock"></i>
+          <input type="password" id="registerConfirmPassword" placeholder="Confirm Password" required>
+        </div>
+        <div class="error" id="registerError">Passwords do not match</div>
+        <button type="submit" class="btn">Register</button>
+      </form>
+      <div class="switch-form">
+        Already have an account? <a id="showLogin">Login Now</a>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
